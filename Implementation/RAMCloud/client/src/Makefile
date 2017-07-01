@@ -22,11 +22,12 @@ ifneq ($(OPLEVEL),0)
 OPL = -O$(OPLEVEL)
 endif
 
-install_all: all install
+#install_all: all install
 
 all:	init $(BINPATH)/KVImplRAMCloud.o
 
 init:
+	#bash ../../install_RAMCloud.sh
 	mkdir -p bin
 
 $(BINPATH)/KVImplRAMCloud.o:	$(IMPLPATH)/KVImplRAMCloud.cpp
